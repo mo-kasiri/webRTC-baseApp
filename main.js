@@ -38,7 +38,8 @@ let init = async () => {
 
     // Managing  localStream
     localStream = await navigator.mediaDevices.getUserMedia(mediaAccess);
-    document.getElementById("user-1").srcObject = localStream;
+    loclaLocalStream = await navigator.mediaDevices.getUserMedia({video:true, audio:false});
+    document.getElementById("user-1").srcObject = loclaLocalStream;
 }
 
 // Callback function for client.on => MemberJoined event
